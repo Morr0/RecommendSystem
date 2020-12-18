@@ -13,15 +13,16 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Item controller working">
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Exceptions/ItemNotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" afterDir="false" />
+    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Review functionality">
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReadDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReviewReadDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewReadDto.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Startup.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,20 +41,24 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/RecommendSystem/appsettings.Development.json" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Models/Item.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Models/Review.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Repositories/DataContext.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemWriteDto.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewWriteDto.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/IItemService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/ItemService.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Startup.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Exceptions/ItemNotFoundException.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Models/Item.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Models/Review.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReadDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewItemDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewReadDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReviewReadDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" />
       </list>
     </option>
@@ -113,7 +118,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608279366331</updated>
-      <workItem from="1608279378398" duration="5200000" />
+      <workItem from="1608279378398" duration="6560000" />
     </task>
     <task id="LOCAL-00001" summary="Initial models">
       <created>1608281090582</created>
@@ -136,7 +141,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608282564359</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Review functionality">
+      <created>1608284928810</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1608284928810</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,9 +172,26 @@
     <MESSAGE value="Initial models" />
     <MESSAGE value="Slight bug fix" />
     <MESSAGE value="Item controller working" />
-    <option name="LAST_COMMIT_MESSAGE" value="Item controller working" />
+    <MESSAGE value="Review functionality" />
+    <option name="LAST_COMMIT_MESSAGE" value="Review functionality" />
   </component>
   <component name="WindowStateProjectService">
+    <state width="1237" height="231" key="GridCell.Tab.0.bottom" timestamp="1608285985624">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
+    <state width="1237" height="231" key="GridCell.Tab.0.center" timestamp="1608285985624">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
+    <state width="1237" height="231" key="GridCell.Tab.0.left" timestamp="1608285985623">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608285985623" />
+    <state width="1237" height="231" key="GridCell.Tab.0.right" timestamp="1608285985624">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
     <state x="458" y="31" key="RiderGenerateDialog" timestamp="1608281948124">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
@@ -171,5 +200,37 @@
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608280612076" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs</url>
+          <line>21</line>
+          <properties documentPath="C:\Users\Rami\RiderProjects\RecommendSystem\RecommendSystem\Services\ReviewService.cs" initialLine="21">
+            <startOffsets>
+              <option value="633" />
+            </startOffsets>
+            <endOffsets>
+              <option value="708" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\Rami\RiderProjects\RecommendSystem\RecommendSystem\Services\ReviewService.cs" initialLine="29">
+            <startOffsets>
+              <option value="947" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1008" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

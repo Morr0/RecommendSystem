@@ -28,11 +28,12 @@ namespace RecommendSystem.Controllers
             try
             {
                 var itemReview = await _reviewService.Review(reviewWriteDto.ItemId, review);
-                return Ok(itemReview);
+                var itemReviewReadDto = _mapper.Map<ItemReviewReadDto>(itemReview);
+                return Ok(itemReviewReadDto);
             }
             catch (ItemNotFoundException e)
             {
-                return NotFound(new {reviewWriteDto.ItemId});
+                return NotFound(new {ItemId = reviewWriteDto.ItemId});
             }
         }
     }

@@ -15,7 +15,10 @@
         </e>
         <e p="DtoModelMappingsProfile.cs" t="Include" />
         <e p="Dtos" t="Include">
+          <e p="ItemReadDto.cs" t="Include" />
+          <e p="ItemReviewReadDto.cs" t="Include" />
           <e p="ItemWriteDto.cs" t="Include" />
+          <e p="ReviewReadDto.cs" t="Include" />
           <e p="ReviewWriteDto.cs" t="Include" />
         </e>
         <e p="Exceptions" t="Include">

@@ -25,7 +25,10 @@ namespace RecommendSystem.Controllers
         public async Task<IActionResult> Get([FromRoute] string id)
         {
             var item = await _itemService.GetItem(id);
-            return item is null ? NotFound() : Ok(item) as IActionResult;
+            if (item is null) return NotFound(new {ItemId = id});
+
+            var itemReadDto = _mapper.Map<ItemReadDto>(item);
+            return Ok(itemReadDto);
         }
 
         [HttpPost]
@@ -35,7 +38,8 @@ namespace RecommendSystem.Controllers
             try
             {
                 await _itemService.AddItem(item);
-                return Ok(item);
+                var itemReadDto = _mapper.Map<ItemReadDto>(item);
+                return Ok(itemReadDto);
             }
             catch (Exception e)
             {
