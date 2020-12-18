@@ -11,11 +11,15 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ItemController.cs" t="Include" />
+          <e p="ReviewController.cs" t="Include" />
         </e>
         <e p="DtoModelMappingsProfile.cs" t="Include" />
         <e p="Dtos" t="Include">
           <e p="ItemWriteDto.cs" t="Include" />
           <e p="ReviewWriteDto.cs" t="Include" />
+        </e>
+        <e p="Exceptions" t="Include">
+          <e p="ItemNotFoundException.cs" t="Include" />
         </e>
         <e p="Migrations" t="Include">
           <e p="20201218085426_Initial.cs" t="Include" />
@@ -44,7 +48,9 @@
         </e>
         <e p="Services" t="Include">
           <e p="IItemService.cs" t="Include" />
+          <e p="IReviewService.cs" t="Include" />
           <e p="ItemService.cs" t="Include" />
+          <e p="ReviewService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
       </e>

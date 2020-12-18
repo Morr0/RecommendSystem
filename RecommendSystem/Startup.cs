@@ -45,6 +45,7 @@ namespace RecommendSystem
             services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             services.AddTransient<IItemService, ItemService>();
+            services.AddTransient<IReviewService, ReviewService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

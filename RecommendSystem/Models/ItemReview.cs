@@ -1,4 +1,6 @@
-﻿namespace RecommendSystem.Models
+﻿using System.Text.Json.Serialization;
+
+namespace RecommendSystem.Models
 {
     public class ItemReview
     {

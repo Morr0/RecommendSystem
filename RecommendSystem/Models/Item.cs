@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text.Json.Serialization;
 
 namespace RecommendSystem.Models
 {
@@ -11,6 +12,7 @@ namespace RecommendSystem.Models
         
         public DateTime DateTime { get; set; } = DateTime.UtcNow;
         
+        [JsonIgnore]
         public IList<ItemReview> ItemReviews { get; set; }
     }
 }
