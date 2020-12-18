@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System;
+using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecommendSystem.Exceptions;
 using RecommendSystem.Models;
@@ -18,7 +19,7 @@ namespace RecommendSystem.Services
         public async Task<ItemReview> Review(string itemId, Review review)
         {
             await using var transaction = await _context.Database.BeginTransactionAsync().ConfigureAwait(false);
-            var item = await _context.Item.FirstOrDefaultAsync().ConfigureAwait(false);
+            var item = await _context.Item.FirstOrDefaultAsync(x => x.Id == itemId).ConfigureAwait(false);
             if (item is null)
             {
                 await transaction.RollbackAsync().ConfigureAwait(false);
