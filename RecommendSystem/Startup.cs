@@ -1,7 +1,9 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Threading.Tasks;
+using AutoMapper;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +15,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RecommendSystem.Repositories;
+using RecommendSystem.Services;
 
 namespace RecommendSystem
 {
@@ -38,6 +41,10 @@ namespace RecommendSystem
             {
                 builder.UseSqlServer(Configuration.GetConnectionString("Sql"));
             });
+
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
+
+            services.AddTransient<IItemService, ItemService>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.

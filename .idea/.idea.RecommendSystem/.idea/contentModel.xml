@@ -9,7 +9,19 @@
         <e p="appsettings.Development.json" t="Include" />
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
-        <e p="Controllers" t="Include" />
+        <e p="Controllers" t="Include">
+          <e p="ItemController.cs" t="Include" />
+        </e>
+        <e p="DtoModelMappingsProfile.cs" t="Include" />
+        <e p="Dtos" t="Include">
+          <e p="ItemWriteDto.cs" t="Include" />
+          <e p="ReviewWriteDto.cs" t="Include" />
+        </e>
+        <e p="Migrations" t="Include">
+          <e p="20201218085426_Initial.cs" t="Include" />
+          <e p="20201218085426_Initial.Designer.cs" t="Include" />
+          <e p="DataContextModelSnapshot.cs" t="Include" />
+        </e>
         <e p="Models" t="Include">
           <e p="Item.cs" t="Include" />
           <e p="ItemReview.cs" t="Include" />
@@ -29,6 +41,10 @@
         <e p="RecommendSystem.csproj" t="IncludeRecursive" />
         <e p="Repositories" t="Include">
           <e p="DataContext.cs" t="Include" />
+        </e>
+        <e p="Services" t="Include">
+          <e p="IItemService.cs" t="Include" />
+          <e p="ItemService.cs" t="Include" />
         </e>
         <e p="Startup.cs" t="Include" />
       </e>

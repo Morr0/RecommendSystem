@@ -13,27 +13,20 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/aws.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem.sln" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Models/Item.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Models/Review.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Program.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Properties/launchSettings.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/RecommendSystem.csproj" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Repositories/DataContext.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Startup.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/appsettings.Development.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/appsettings.json" afterDir="false" />
+    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Slight bug fix">
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ItemWriteDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewWriteDto.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Migrations/20201218085426_Initial.Designer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Migrations/20201218085426_Initial.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Migrations/DataContextModelSnapshot.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Services/IItemService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/RecommendSystem/Services/ItemService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/RecommendSystem.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/RecommendSystem.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Startup.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Startup.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,15 +36,25 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="mock://C:/Users/Rami/RiderProjects/RecommendSystem/RecommendSystem/Startup.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/Rami/RiderProjects/RecommendSystem/RecommendSystem/Models/ItemReview.cs" root0="SKIP_HIGHLIGHTING" />
+  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/appsettings.Development.json" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Startup.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Models/Item.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Models/Review.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Repositories/DataContext.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemWriteDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewWriteDto.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Services/IItemService.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Services/ItemService.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Startup.cs" />
       </list>
     </option>
   </component>
@@ -64,6 +67,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
@@ -109,8 +113,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608279366331</updated>
-      <workItem from="1608279378398" duration="1557000" />
+      <workItem from="1608279378398" duration="3046000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial models">
+      <created>1608281090582</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1608281090582</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Slight bug fix">
+      <created>1608281832918</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1608281832918</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -131,8 +150,15 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="Initial models" />
+    <MESSAGE value="Slight bug fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Slight bug fix" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="458" y="31" key="RiderGenerateDialog" timestamp="1608281948124">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="458" y="31" key="RiderGenerateDialog/0.0.1280.680@0.0.1280.680" timestamp="1608281948124" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1608280612076">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
