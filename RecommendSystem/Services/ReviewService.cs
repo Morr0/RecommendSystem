@@ -1,4 +1,6 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
 using RecommendSystem.Exceptions;
@@ -38,6 +40,20 @@ namespace RecommendSystem.Services
             await transaction.CommitAsync().ConfigureAwait(false);
 
             return itemReview;
+        }
+
+        public async Task<IList<Review>> GetItemReviews(string itemId)
+        {
+            // TODO handle pagination
+            var hasItem = await _context.Item.AsNoTracking().AnyAsync(x => x.Id == itemId).ConfigureAwait(false);
+            if (!hasItem) throw new ItemNotFoundException();
+
+            var reviews = await (from ir in _context.ItemReview
+                join i in _context.Item on ir.ItemId equals i.Id
+                join r in _context.Review on ir.ReviewId equals r.Id
+                where ir.ItemId == itemId
+                select ir.Review).AsNoTracking().ToListAsync();
+            return reviews;
         }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
 using RecommendSystem.Dtos;
@@ -34,6 +35,21 @@ namespace RecommendSystem.Controllers
             catch (ItemNotFoundException e)
             {
                 return NotFound(new {ItemId = reviewWriteDto.ItemId});
+            }
+        }
+
+        [HttpGet("item/{itemId}")]
+        public async Task<IActionResult> GetReviewsForItem([FromRoute] string itemId)
+        {
+            try
+            {
+                var reviews = await _reviewService.GetItemReviews(itemId);
+                var reviewsReadDtos = _mapper.Map<IList<ReviewReadDto>>(reviews);
+                return Ok(reviewsReadDtos);
+            }
+            catch (ItemNotFoundException e)
+            {
+                return NotFound(new {ItemId = itemId});
             }
         }
     }

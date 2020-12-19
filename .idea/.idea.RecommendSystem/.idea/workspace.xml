@@ -13,15 +13,10 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Review functionality">
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReadDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReviewReadDto.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewReadDto.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Complete use of read DTOs">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -32,11 +27,6 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/Rami/RiderProjects/RecommendSystem/RecommendSystem/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rami/RiderProjects/RecommendSystem/RecommendSystem/Startup.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/Rami/RiderProjects/RecommendSystem/RecommendSystem/Models/ItemReview.cs" root0="SKIP_HIGHLIGHTING" />
-  </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
@@ -46,7 +36,6 @@
         <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ReviewWriteDto.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/IItemService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/ItemService.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Startup.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Exceptions/ItemNotFoundException.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Models/ItemReview.cs" />
@@ -58,6 +47,7 @@
         <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReviewReadDto.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" />
       </list>
@@ -74,6 +64,8 @@
   <component name="PropertiesComponent">
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="DebuggerViewTab_PTCS_FirstProportionKey" value="0.34991708" />
+    <property name="DebuggerViewTab_PTCS_LastProportionKey" value="0.30016583" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="vue.rearranger.settings.migration" value="true" />
@@ -118,7 +110,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1608279366331</updated>
-      <workItem from="1608279378398" duration="6560000" />
+      <workItem from="1608279378398" duration="8994000" />
+      <workItem from="1608362436241" duration="298000" />
     </task>
     <task id="LOCAL-00001" summary="Initial models">
       <created>1608281090582</created>
@@ -148,13 +141,27 @@
       <option name="project" value="LOCAL" />
       <updated>1608284928810</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Bug fix where not checking for id">
+      <created>1608286176281</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1608286176281</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Complete use of read DTOs">
+      <created>1608286199836</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1608286199836</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
-  <component name="UnityProjectConfiguration" hasMinimizedUI="null" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -166,6 +173,7 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -173,64 +181,110 @@
     <MESSAGE value="Slight bug fix" />
     <MESSAGE value="Item controller working" />
     <MESSAGE value="Review functionality" />
-    <option name="LAST_COMMIT_MESSAGE" value="Review functionality" />
+    <MESSAGE value="Bug fix where not checking for id" />
+    <MESSAGE value="Complete use of read DTOs" />
+    <option name="LAST_COMMIT_MESSAGE" value="Complete use of read DTOs" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1237" height="231" key="GridCell.Tab.0.bottom" timestamp="1608285985624">
+    <state width="1237" height="231" key="GridCell.Tab.0.bottom" timestamp="1608288442916">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="231" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
-    <state width="1237" height="231" key="GridCell.Tab.0.center" timestamp="1608285985624">
+    <state width="1237" height="231" key="GridCell.Tab.0.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.0.center" timestamp="1608288442916">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="231" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
-    <state width="1237" height="231" key="GridCell.Tab.0.left" timestamp="1608285985623">
+    <state width="1237" height="231" key="GridCell.Tab.0.center/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.0.left" timestamp="1608288442916">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="231" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608285985623" />
-    <state width="1237" height="231" key="GridCell.Tab.0.right" timestamp="1608285985624">
+    <state width="1237" height="231" key="GridCell.Tab.0.left/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.0.right" timestamp="1608288442916">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state width="1237" height="231" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608285985624" />
+    <state width="1237" height="231" key="GridCell.Tab.0.right/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.1.bottom" timestamp="1608288442927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.1.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608288442927" />
+    <state width="1237" height="231" key="GridCell.Tab.1.center" timestamp="1608288442916">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.1.center/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.1.left" timestamp="1608288442916">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.1.left/0.0.1280.680@0.0.1280.680" timestamp="1608288442916" />
+    <state width="1237" height="231" key="GridCell.Tab.1.right" timestamp="1608288442927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.1.right/0.0.1280.680@0.0.1280.680" timestamp="1608288442927" />
+    <state width="1237" height="231" key="GridCell.Tab.2.bottom" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.2.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.2.center" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.2.center/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.2.left" timestamp="1608288442927">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.2.left/0.0.1280.680@0.0.1280.680" timestamp="1608288442927" />
+    <state width="1237" height="231" key="GridCell.Tab.2.right" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.2.right/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.3.bottom" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.3.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.3.center" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.3.center/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.3.left" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.3.left/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.3.right" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.3.right/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.4.bottom" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.4.bottom/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.4.center" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.4.center/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.4.left" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.4.left/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
+    <state width="1237" height="231" key="GridCell.Tab.4.right" timestamp="1608288442928">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state width="1237" height="231" key="GridCell.Tab.4.right/0.0.1280.680@0.0.1280.680" timestamp="1608288442928" />
     <state x="458" y="31" key="RiderGenerateDialog" timestamp="1608281948124">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="458" y="31" key="RiderGenerateDialog/0.0.1280.680@0.0.1280.680" timestamp="1608281948124" />
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2" timestamp="1608288416881">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="233" y="74" key="Vcs.Push.Dialog.v2/0.0.1280.680@0.0.1280.680" timestamp="1608288416881" />
+    <state x="319" y="73" width="642" height="534" key="find.popup" timestamp="1608286072746">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="319" y="73" width="642" height="534" key="find.popup/0.0.1280.680@0.0.1280.680" timestamp="1608286072746" />
     <state x="297" y="151" key="run.anything.popup" timestamp="1608280612076">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
     <state x="297" y="151" key="run.anything.popup/0.0.1280.680@0.0.1280.680" timestamp="1608280612076" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs</url>
-          <line>21</line>
-          <properties documentPath="C:\Users\Rami\RiderProjects\RecommendSystem\RecommendSystem\Services\ReviewService.cs" initialLine="21">
-            <startOffsets>
-              <option value="633" />
-            </startOffsets>
-            <endOffsets>
-              <option value="708" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs</url>
-          <line>29</line>
-          <properties documentPath="C:\Users\Rami\RiderProjects\RecommendSystem\RecommendSystem\Services\ReviewService.cs" initialLine="29">
-            <startOffsets>
-              <option value="947" />
-            </startOffsets>
-            <endOffsets>
-              <option value="1008" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup" timestamp="1608286065395">
+      <screen x="0" y="0" width="1280" height="680" />
+    </state>
+    <state x="303" y="1" width="672" height="678" key="search.everywhere.popup/0.0.1280.680@0.0.1280.680" timestamp="1608286065395" />
   </component>
 </project>
