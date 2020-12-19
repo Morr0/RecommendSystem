@@ -41,18 +41,23 @@ namespace RecommendSystem.Services
             return itemReview;
         }
 
-        public async Task<IList<Review>> GetItemReviews(string itemId, int page, byte size)
+        public async Task<IList<Review>> GetItemReviews(string itemId, int page, byte size, bool hasComment)
         {
             var hasItem = await _context.Item.AsNoTracking().AnyAsync(x => x.Id == itemId).ConfigureAwait(false);
             if (!hasItem) throw new ItemNotFoundException();
 
             var queryable = (from ir in _context.ItemReview
-                join i in _context.Item on ir.ItemId equals i.Id
-                join r in _context.Review on ir.ReviewId equals r.Id
-                where ir.ItemId == itemId
-                select ir.Review)
+                    join i in _context.Item on ir.ItemId equals i.Id
+                    join r in _context.Review on ir.ReviewId equals r.Id
+                    where ir.ItemId == itemId
+                    select ir.Review)
                 .Skip(page * size)
                 .Take(size);
+
+            if (hasComment)
+            {
+                queryable = queryable.Where(x => !string.IsNullOrEmpty(x.Comment));
+            }
 
             var reviews = await queryable.AsNoTracking().ToListAsync().ConfigureAwait(false);
             return reviews;

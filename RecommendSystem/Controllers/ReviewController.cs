@@ -45,7 +45,7 @@ namespace RecommendSystem.Controllers
         {
             try
             {
-                var reviews = await _reviewService.GetItemReviews(itemId, query.Page, query.Size);
+                var reviews = await _reviewService.GetItemReviews(itemId, query.Page, query.Size, query.HaveComments);
                 var reviewsReadDtos = _mapper.Map<IList<ReviewReadDto>>(reviews);
                 return Ok(Response(query, ref reviewsReadDtos));
             }

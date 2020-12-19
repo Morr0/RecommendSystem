@@ -13,11 +13,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Get item reviews">
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/Queiries/GetItemReviewsQuery.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/Responses/GetReviewsForItemResponse.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/contentModel.xml" afterDir="false" />
+    <list default="true" id="dd850a3f-cfba-4163-8c4d-9bfbbc9a0ddf" name="Default Changelist" comment="Pagination implemented">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.RecommendSystem/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/Queiries/GetItemReviewsQuery.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/Queiries/GetItemReviewsQuery.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" afterDir="false" />
@@ -54,10 +52,10 @@
         <option value="$PROJECT_DIR$/RecommendSystem/Dtos/ItemReviewReadDto.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/DtoModelMappingsProfile.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ItemController.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Controllers/Responses/GetReviewsForItemResponse.cs" />
-        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/Queiries/GetItemReviewsQuery.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Services/IReviewService.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Controllers/ReviewController.cs" />
+        <option value="$PROJECT_DIR$/RecommendSystem/Controllers/Queiries/GetItemReviewsQuery.cs" />
         <option value="$PROJECT_DIR$/RecommendSystem/Services/ReviewService.cs" />
       </list>
     </option>
@@ -120,7 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1608279366331</updated>
       <workItem from="1608279378398" duration="8994000" />
-      <workItem from="1608362436241" duration="3277000" />
+      <workItem from="1608362436241" duration="4369000" />
     </task>
     <task id="LOCAL-00001" summary="Initial models">
       <created>1608281090582</created>
@@ -171,7 +169,14 @@
       <option name="project" value="LOCAL" />
       <updated>1608362906224</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Pagination implemented">
+      <created>1608366333229</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1608366333229</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -200,7 +205,8 @@
     <MESSAGE value="Bug fix where not checking for id" />
     <MESSAGE value="Complete use of read DTOs" />
     <MESSAGE value="Get item reviews" />
-    <option name="LAST_COMMIT_MESSAGE" value="Get item reviews" />
+    <MESSAGE value="Pagination implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="Pagination implemented" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1237" height="231" key="GridCell.Tab.0.bottom" timestamp="1608288442916">

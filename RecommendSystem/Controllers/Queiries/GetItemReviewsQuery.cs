@@ -9,5 +9,7 @@ namespace RecommendSystem.Controllers.Queiries
         
         [Range(1, MaxPageSize)] public byte Size { get; set; } = MaxPageSize;
         [Range(0, Int32.MaxValue)] public int Page { get; set; }
+
+        public bool HaveComments { get; set; }
     }
 }
