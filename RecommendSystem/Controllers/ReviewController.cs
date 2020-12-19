@@ -2,6 +2,8 @@
 using System.Threading.Tasks;
 using AutoMapper;
 using Microsoft.AspNetCore.Mvc;
+using RecommendSystem.Controllers.Queiries;
+using RecommendSystem.Controllers.Responses;
 using RecommendSystem.Dtos;
 using RecommendSystem.Exceptions;
 using RecommendSystem.Models;
@@ -39,18 +41,30 @@ namespace RecommendSystem.Controllers
         }
 
         [HttpGet("item/{itemId}")]
-        public async Task<IActionResult> GetReviewsForItem([FromRoute] string itemId)
+        public async Task<IActionResult> GetReviewsForItem([FromRoute] string itemId, [FromQuery] GetItemReviewsQuery query)
         {
             try
             {
-                var reviews = await _reviewService.GetItemReviews(itemId);
+                var reviews = await _reviewService.GetItemReviews(itemId, query.Page, query.Size);
                 var reviewsReadDtos = _mapper.Map<IList<ReviewReadDto>>(reviews);
-                return Ok(reviewsReadDtos);
+                return Ok(Response(query, ref reviewsReadDtos));
             }
             catch (ItemNotFoundException e)
             {
                 return NotFound(new {ItemId = itemId});
             }
+        }
+
+        private GetReviewsForItemResponse Response(GetItemReviewsQuery query, ref IList<ReviewReadDto> reviews)
+        {
+            byte count = (byte) reviews.Count;
+            return new GetReviewsForItemResponse
+            {
+                Page = query.Page,
+                Size = query.Size,
+                Count = count,
+                Reviews = reviews
+            };
         }
     }
 }

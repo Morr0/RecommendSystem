@@ -11,8 +11,15 @@
         <e p="bin" t="ExcludeRecursive" />
         <e p="Controllers" t="Include">
           <e p="ItemController.cs" t="Include" />
+          <e p="Queiries" t="Include">
+            <e p="GetItemReviewsQuery.cs" t="Include" />
+          </e>
+          <e p="Responses" t="Include">
+            <e p="GetReviewsForItemResponse.cs" t="Include" />
+          </e>
           <e p="ReviewController.cs" t="Include" />
         </e>
+        <e p="debug.log" t="Include" />
         <e p="DtoModelMappingsProfile.cs" t="Include" />
         <e p="Dtos" t="Include">
           <e p="ItemReadDto.cs" t="Include" />

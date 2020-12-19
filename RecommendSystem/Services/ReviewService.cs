@@ -1,5 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
@@ -42,17 +41,20 @@ namespace RecommendSystem.Services
             return itemReview;
         }
 
-        public async Task<IList<Review>> GetItemReviews(string itemId)
+        public async Task<IList<Review>> GetItemReviews(string itemId, int page, byte size)
         {
-            // TODO handle pagination
             var hasItem = await _context.Item.AsNoTracking().AnyAsync(x => x.Id == itemId).ConfigureAwait(false);
             if (!hasItem) throw new ItemNotFoundException();
 
-            var reviews = await (from ir in _context.ItemReview
+            var queryable = (from ir in _context.ItemReview
                 join i in _context.Item on ir.ItemId equals i.Id
                 join r in _context.Review on ir.ReviewId equals r.Id
                 where ir.ItemId == itemId
-                select ir.Review).AsNoTracking().ToListAsync();
+                select ir.Review)
+                .Skip(page * size)
+                .Take(size);
+
+            var reviews = await queryable.AsNoTracking().ToListAsync().ConfigureAwait(false);
             return reviews;
         }
     }

@@ -7,6 +7,6 @@ namespace RecommendSystem.Services
     public interface IReviewService
     {
         Task<ItemReview> Review(string itemId, Review review);
-        Task<IList<Review>> GetItemReviews(string itemId);
+        Task<IList<Review>> GetItemReviews(string itemId, int page, byte size);
     }
 }
